@@ -1,0 +1,715 @@
+{
+  "repository": "libre-ai/db-inspect",
+  "revision": "3562198f8f04608305121663180e26f4eba03404",
+  "files": [
+    {
+      "sourcePath": ".gitignore",
+      "destinationPath": ".gitignore",
+      "sha256": "45a9a430fc709e4c408686c82088ef092a0713fd4c987e013a320381056b1e5c"
+    },
+    {
+      "sourcePath": "CONTRIBUTING.md",
+      "destinationPath": "CONTRIBUTING.md",
+      "sha256": "1d132fdf8b4dd6f99e81340c3556cf79f8b83005e8f0eb09ff5ccfe3fc980f6d"
+    },
+    {
+      "sourcePath": "Cargo.lock",
+      "destinationPath": "Cargo.lock",
+      "sha256": "b4140c7fc92cb437248e58265594d5d431eb95ef8ab3c3998f6ec9d4b33568ef"
+    },
+    {
+      "sourcePath": "Cargo.toml",
+      "destinationPath": "Cargo.toml",
+      "sha256": "97f093fdac77da9a151ae221b6d258d7998ef78c349710e35c252c49218b86a2"
+    },
+    {
+      "sourcePath": "LICENSE",
+      "destinationPath": "LICENSE",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+    },
+    {
+      "sourcePath": "LICENSES/Apache-2.0.txt",
+      "destinationPath": "LICENSES/Apache-2.0.txt",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+    },
+    {
+      "sourcePath": "REUSE.toml",
+      "destinationPath": "REUSE.toml",
+      "sha256": "024219ee33bfaeff7c8e2b84dc91e537ebfb565ccb505ce68e2cfdd0d01978a0"
+    },
+    {
+      "sourcePath": "SECURITY.md",
+      "destinationPath": "SECURITY.md",
+      "sha256": "73d621065f94f62fe28ae5a980743e06b8547a6d2b31c349390a3d7b3be7bbc0"
+    },
+    {
+      "sourcePath": "deny.toml",
+      "destinationPath": "deny.toml",
+      "sha256": "31965521bd124cbb7402c681201b611f714e172b1b62f82871668fa451a875cf"
+    },
+    {
+      "sourcePath": "docs/adr/0001-scope-and-upstream-policy.md",
+      "destinationPath": "docs/adr/0001-scope-and-upstream-policy.md",
+      "sha256": "85b961d81bf5f3218feac702e83c858df7ed7b382ed67cbca8031464f1a36c6b"
+    },
+    {
+      "sourcePath": "docs/adr/0002-fail-loud-sql-coverage-and-inspection-clock.md",
+      "destinationPath": "docs/adr/0002-fail-loud-sql-coverage-and-inspection-clock.md",
+      "sha256": "4bdb4ca0f8b2fc75befc961626052954bcc87590d370bdfa916ff07ecee52834"
+    },
+    {
+      "sourcePath": "docs/plans/2026-07-db-inspect-gates.md",
+      "destinationPath": "docs/plans/2026-07-db-inspect-gates.md",
+      "sha256": "73820225bb277b64197d23431088e5f7c10e1488f0679da72f3ec8e1e448e871"
+    },
+    {
+      "sourcePath": "rust-toolchain.toml",
+      "destinationPath": "rust-toolchain.toml",
+      "sha256": "a1a2bd1662fdb8e16350fdff6ce5037f50974664481dd69f5a1c3282fb7403ef"
+    },
+    {
+      "sourcePath": "src/finding.rs",
+      "destinationPath": "src/finding.rs",
+      "sha256": "c1e6e23d9f87ee0fb835cee95b467e5932edb3fa2fc2b26bf26b684e5ce73fb0"
+    },
+    {
+      "sourcePath": "src/gate_profile.rs",
+      "destinationPath": "src/gate_profile.rs",
+      "sha256": "3edebf7c4568a95a544cf94f9423cbf599a14df45a3ed82324ffb09147293576"
+    },
+    {
+      "sourcePath": "src/lib.rs",
+      "destinationPath": "src/lib.rs",
+      "sha256": "5aae7e47051b1d71c6d814f4fdab124b95515cc38f3da465237db73ed8185373"
+    },
+    {
+      "sourcePath": "src/main.rs",
+      "destinationPath": "src/main.rs",
+      "sha256": "f23756939382b2bf56ab4bcd979cba75810fc264fcaa90458d8ddd58b103eed8"
+    },
+    {
+      "sourcePath": "src/manifest.rs",
+      "destinationPath": "src/manifest.rs",
+      "sha256": "54240a5d50ae122ed352871ff25ca21a126dc11ee2ed80dd7cbd07204081ca8a"
+    },
+    {
+      "sourcePath": "src/redaction.rs",
+      "destinationPath": "src/redaction.rs",
+      "sha256": "7d734d19a0b88f99af3500721a1779470a06ea2098990eb72373740b051e9494"
+    },
+    {
+      "sourcePath": "src/report.rs",
+      "destinationPath": "src/report.rs",
+      "sha256": "37216386170797b13dd903dcabccdd08443c9385782108d9e159a34b1fd2eb8c"
+    },
+    {
+      "sourcePath": "src/rules.rs",
+      "destinationPath": "src/rules.rs",
+      "sha256": "170796df9958f79358a260f8e70905151c013d690241336fd3572f64eec7d802"
+    },
+    {
+      "sourcePath": "src/sql_facts.rs",
+      "destinationPath": "src/sql_facts.rs",
+      "sha256": "3c403a9b070b47fe3dd6bf9a5d3986d629509381fba6d7b4a5f87259f1296f77"
+    },
+    {
+      "sourcePath": "tests/fixtures/README.md",
+      "destinationPath": "tests/fixtures/README.md",
+      "sha256": "4ef99424a332514329f24ce92f8345132784e9cda8a07e2679670016fa95cf5e"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/dangerous_drop_column/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/dangerous_drop_column/expected-report.json",
+      "sha256": "c55366752c32ec521b57f667580863ab6e60ecbe5273aa77300e1425f1f14f1f"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/dangerous_drop_column/manifest.json",
+      "destinationPath": "tests/fixtures/fail/dangerous_drop_column/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/dangerous_drop_column/schema.sql",
+      "destinationPath": "tests/fixtures/fail/dangerous_drop_column/schema.sql",
+      "sha256": "84dc30c924ac272dfb26f15e11187ebc06979003b8b8d8926e7bd2f665aa54bd"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/dangerous_drop_table/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/dangerous_drop_table/expected-report.json",
+      "sha256": "8775567e3a064db5306dc4b87cb134a54438d9e0651ebef14b4cbd30a8ae1259"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/dangerous_drop_table/manifest.json",
+      "destinationPath": "tests/fixtures/fail/dangerous_drop_table/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/dangerous_drop_table/schema.sql",
+      "destinationPath": "tests/fixtures/fail/dangerous_drop_table/schema.sql",
+      "sha256": "14c5c370b65516a78469a0392dbd27394becafff381b72387c54bd18db25a4a0"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/default_privileges_grant_all_dangerous/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/default_privileges_grant_all_dangerous/expected-report.json",
+      "sha256": "32e0dca0c25054cd1c834619195a63256e0aa269e03b4bda7200a668ff676ce1"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/default_privileges_grant_all_dangerous/manifest.json",
+      "destinationPath": "tests/fixtures/fail/default_privileges_grant_all_dangerous/manifest.json",
+      "sha256": "a5fe7dd0388711d68b4d686b4cadb92575b0da6765665adb2302ecfe1dfbcff7"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/default_privileges_grant_all_dangerous/schema.sql",
+      "destinationPath": "tests/fixtures/fail/default_privileges_grant_all_dangerous/schema.sql",
+      "sha256": "bc320c9518bb8a6f525184fbc31bdc1d1d02aacbf66c0ae187067568eab34353"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/disable_rls_migration/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/disable_rls_migration/expected-report.json",
+      "sha256": "2a257e1d4f0b3712567362232eb32ccfd8561d8f4d18a028dc234bb4c241e56c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/disable_rls_migration/manifest.json",
+      "destinationPath": "tests/fixtures/fail/disable_rls_migration/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/disable_rls_migration/schema.sql",
+      "destinationPath": "tests/fixtures/fail/disable_rls_migration/schema.sql",
+      "sha256": "ac2033b8bc3f5145f6ae6fe8f762bcd2413095a0c016f1b989e37479dc18a390"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_constraint_dangerous/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/drop_constraint_dangerous/expected-report.json",
+      "sha256": "a4d73a9699aaeff74a0cf93ca74a51a4c6835a56b55582b0f317e68ac0c54666"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_constraint_dangerous/manifest.json",
+      "destinationPath": "tests/fixtures/fail/drop_constraint_dangerous/manifest.json",
+      "sha256": "a5fe7dd0388711d68b4d686b4cadb92575b0da6765665adb2302ecfe1dfbcff7"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_constraint_dangerous/schema.sql",
+      "destinationPath": "tests/fixtures/fail/drop_constraint_dangerous/schema.sql",
+      "sha256": "7c6c56a3a9f588d122a1ff18d7001c2bafab5857d040f21774c3584aed9630b2"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_foreign_key_dangerous/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/drop_foreign_key_dangerous/expected-report.json",
+      "sha256": "a4d73a9699aaeff74a0cf93ca74a51a4c6835a56b55582b0f317e68ac0c54666"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_foreign_key_dangerous/manifest.json",
+      "destinationPath": "tests/fixtures/fail/drop_foreign_key_dangerous/manifest.json",
+      "sha256": "a5fe7dd0388711d68b4d686b4cadb92575b0da6765665adb2302ecfe1dfbcff7"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_foreign_key_dangerous/schema.sql",
+      "destinationPath": "tests/fixtures/fail/drop_foreign_key_dangerous/schema.sql",
+      "sha256": "8de21d45887ce0082c212d03bcd9a5a517dbffb020a7db527d3d5f0048c177ba"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_not_null_dangerous/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/drop_not_null_dangerous/expected-report.json",
+      "sha256": "a4d73a9699aaeff74a0cf93ca74a51a4c6835a56b55582b0f317e68ac0c54666"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_not_null_dangerous/manifest.json",
+      "destinationPath": "tests/fixtures/fail/drop_not_null_dangerous/manifest.json",
+      "sha256": "a5fe7dd0388711d68b4d686b4cadb92575b0da6765665adb2302ecfe1dfbcff7"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_not_null_dangerous/schema.sql",
+      "destinationPath": "tests/fixtures/fail/drop_not_null_dangerous/schema.sql",
+      "sha256": "393caa1b37dae07c88b52b75704f4d8572e6596c96f4d7e998e348885e9d9edd"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_policy_dangerous/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/drop_policy_dangerous/expected-report.json",
+      "sha256": "a4d73a9699aaeff74a0cf93ca74a51a4c6835a56b55582b0f317e68ac0c54666"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_policy_dangerous/manifest.json",
+      "destinationPath": "tests/fixtures/fail/drop_policy_dangerous/manifest.json",
+      "sha256": "a5fe7dd0388711d68b4d686b4cadb92575b0da6765665adb2302ecfe1dfbcff7"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/drop_policy_dangerous/schema.sql",
+      "destinationPath": "tests/fixtures/fail/drop_policy_dangerous/schema.sql",
+      "sha256": "266eaff422ca344d9aa55d209feef2fe5d81da53a020e902b2cb153295eec70a"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_public_dangerous/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/grant_all_public_dangerous/expected-report.json",
+      "sha256": "a4d73a9699aaeff74a0cf93ca74a51a4c6835a56b55582b0f317e68ac0c54666"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_public_dangerous/manifest.json",
+      "destinationPath": "tests/fixtures/fail/grant_all_public_dangerous/manifest.json",
+      "sha256": "a5fe7dd0388711d68b4d686b4cadb92575b0da6765665adb2302ecfe1dfbcff7"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_public_dangerous/schema.sql",
+      "destinationPath": "tests/fixtures/fail/grant_all_public_dangerous/schema.sql",
+      "sha256": "3d85f576233467d5e25d28aea421013ec3e1c626d528179f9cc53119a6f91f39"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_schema_dangerous/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/grant_all_schema_dangerous/expected-report.json",
+      "sha256": "a4d73a9699aaeff74a0cf93ca74a51a4c6835a56b55582b0f317e68ac0c54666"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_schema_dangerous/manifest.json",
+      "destinationPath": "tests/fixtures/fail/grant_all_schema_dangerous/manifest.json",
+      "sha256": "a5fe7dd0388711d68b4d686b4cadb92575b0da6765665adb2302ecfe1dfbcff7"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_schema_dangerous/schema.sql",
+      "destinationPath": "tests/fixtures/fail/grant_all_schema_dangerous/schema.sql",
+      "sha256": "08b1462b66be3a5ec80ade3169bd51905652703d352340b5a1e9d757559a46ea"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_tables_in_schema_dangerous/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/grant_all_tables_in_schema_dangerous/expected-report.json",
+      "sha256": "a4d73a9699aaeff74a0cf93ca74a51a4c6835a56b55582b0f317e68ac0c54666"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_tables_in_schema_dangerous/manifest.json",
+      "destinationPath": "tests/fixtures/fail/grant_all_tables_in_schema_dangerous/manifest.json",
+      "sha256": "a5fe7dd0388711d68b4d686b4cadb92575b0da6765665adb2302ecfe1dfbcff7"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_tables_in_schema_dangerous/schema.sql",
+      "destinationPath": "tests/fixtures/fail/grant_all_tables_in_schema_dangerous/schema.sql",
+      "sha256": "6cce98b98fb096c1a01d2d08c7b75b0e7d5ee94a20fe5bc197d848e4f1900b56"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_to_app_role/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/grant_all_to_app_role/expected-report.json",
+      "sha256": "abb41f59a62ab9ff799b9c7c36959560a20dc260a1e05c2036e83f292af2b329"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_to_app_role/manifest.json",
+      "destinationPath": "tests/fixtures/fail/grant_all_to_app_role/manifest.json",
+      "sha256": "0e81d6819c7d6cc2b762451b0a3bf4706d8893a953d50ab39b947244ad664347"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_all_to_app_role/schema.sql",
+      "destinationPath": "tests/fixtures/fail/grant_all_to_app_role/schema.sql",
+      "sha256": "d57fad252dbac391d560993e5536975c74800ea5e65dfc1a7234a525fb4bfad4"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_to_unknown_role/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/grant_to_unknown_role/expected-report.json",
+      "sha256": "74d2520759b8e400489a5dadbf6fb25e50b10db91615b33d8646dd57e1c4110c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_to_unknown_role/manifest.json",
+      "destinationPath": "tests/fixtures/fail/grant_to_unknown_role/manifest.json",
+      "sha256": "0e81d6819c7d6cc2b762451b0a3bf4706d8893a953d50ab39b947244ad664347"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/grant_to_unknown_role/schema.sql",
+      "destinationPath": "tests/fixtures/fail/grant_to_unknown_role/schema.sql",
+      "sha256": "e0b6310c769b0b20214c298d48900f258cf05948bcbd7e6c49fadc717c537c77"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/no_force_rls_forbidden/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/no_force_rls_forbidden/expected-report.json",
+      "sha256": "a4d73a9699aaeff74a0cf93ca74a51a4c6835a56b55582b0f317e68ac0c54666"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/no_force_rls_forbidden/manifest.json",
+      "destinationPath": "tests/fixtures/fail/no_force_rls_forbidden/manifest.json",
+      "sha256": "a5fe7dd0388711d68b4d686b4cadb92575b0da6765665adb2302ecfe1dfbcff7"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/no_force_rls_forbidden/schema.sql",
+      "destinationPath": "tests/fixtures/fail/no_force_rls_forbidden/schema.sql",
+      "sha256": "5334998fb10dba44f12ebbc8fdcb29e2a8f4108fbe079c92d31a1f5b07690c08"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/pgvector_global_embedding_leak/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/pgvector_global_embedding_leak/expected-report.json",
+      "sha256": "08870a8afcca1ae55be97c57a90b96557c869eccea4907f352ec24dab8883aa3"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/pgvector_global_embedding_leak/manifest.json",
+      "destinationPath": "tests/fixtures/fail/pgvector_global_embedding_leak/manifest.json",
+      "sha256": "7f2b0fa4d988429e405688d41c6bcb243a078efa650b2ac0bc213944bd01d9fd"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/pgvector_global_embedding_leak/schema.sql",
+      "destinationPath": "tests/fixtures/fail/pgvector_global_embedding_leak/schema.sql",
+      "sha256": "e7fbde2fcd17d729ffd911f0c05e8320d1aa7e0d8db5082822a8199aff085d34"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/rls_missing_on_tenant_table/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/rls_missing_on_tenant_table/expected-report.json",
+      "sha256": "8192196486b554c2223cb9ddcd306ef41f9a60e094ab9f632e40a27919d4e2db"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/rls_missing_on_tenant_table/manifest.json",
+      "destinationPath": "tests/fixtures/fail/rls_missing_on_tenant_table/manifest.json",
+      "sha256": "ed729dcad8d0f0fe88969fe639b5bdc9eb5b0c681e6aeaae1dbb919a28f58a41"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/rls_missing_on_tenant_table/schema.sql",
+      "destinationPath": "tests/fixtures/fail/rls_missing_on_tenant_table/schema.sql",
+      "sha256": "813f1c0d9b0bd0db8947d3f351564a60020a787605867509b3e179501cb3660c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/rls_not_forced_on_tenant_table/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/rls_not_forced_on_tenant_table/expected-report.json",
+      "sha256": "46e0050bc4bfdd23adbbc587048dbe7ad312e1a063566eda5b478125ddf2697c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/rls_not_forced_on_tenant_table/manifest.json",
+      "destinationPath": "tests/fixtures/fail/rls_not_forced_on_tenant_table/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/rls_not_forced_on_tenant_table/schema.sql",
+      "destinationPath": "tests/fixtures/fail/rls_not_forced_on_tenant_table/schema.sql",
+      "sha256": "0be98616dad0046d8bd10dfb96c03fb544944a9a2171d2a1d4050c2d07e766c3"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/set_row_security_off/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/set_row_security_off/expected-report.json",
+      "sha256": "a506eb387f4cddefe5c4e42d8e1f077090135072530f4c8fed75db48ce41bfdc"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/set_row_security_off/manifest.json",
+      "destinationPath": "tests/fixtures/fail/set_row_security_off/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/set_row_security_off/schema.sql",
+      "destinationPath": "tests/fixtures/fail/set_row_security_off/schema.sql",
+      "sha256": "87f3207bb72d09335984ea5c6426b850643e1674dffff4ca6293e8ac66bc70b1"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_missing_fk/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_missing_fk/expected-report.json",
+      "sha256": "6531190755f247d6fbca64ddd539d24aa8a2b1f70d36f3ea9626112098501cb1"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_missing_fk/manifest.json",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_missing_fk/manifest.json",
+      "sha256": "b453144fd6844244649b99c9bced07067c670da0f5dd83edd291919b9e24536b"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_missing_fk/schema.sql",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_missing_fk/schema.sql",
+      "sha256": "36999607cb85963b2d3943137115ac1e0f07f10aec026bb394f3c5c43e465900"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_multihop_policy_missing/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_multihop_policy_missing/expected-report.json",
+      "sha256": "94336ccd991840aa60d609e880a4248fcf5cfb98f282df0dfd8053aeb0c6762e"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_multihop_policy_missing/manifest.json",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_multihop_policy_missing/manifest.json",
+      "sha256": "0e35616d83ccc3ba7418e1df5c46b448e186be2aa83ac746618105a2acb9f471"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_multihop_policy_missing/schema.sql",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_multihop_policy_missing/schema.sql",
+      "sha256": "a8a7e5ded76413878826b88b515688157fbcc0c6cecadc0282d58763ab7c66d5"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_path_invalid/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_path_invalid/expected-report.json",
+      "sha256": "f348d197f4e254f61dd2dacadac8ec3870b047aea7e192b0bee64816a6d6f8f2"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_path_invalid/manifest.json",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_path_invalid/manifest.json",
+      "sha256": "b31b728a19a71cc4adac263eb95b69e401b1004056283d618eb96d2aa38365c7"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_path_invalid/schema.sql",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_path_invalid/schema.sql",
+      "sha256": "d5f86736356b6a77a45de8b3e5325764f4df3ed54df45016dc51e98c2cdecf3f"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_policy_without_join/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_policy_without_join/expected-report.json",
+      "sha256": "a2c2e24872939e0b3cd69e18857ca767161c3487e080dd98de5fd8f0b71ea634"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_policy_without_join/manifest.json",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_policy_without_join/manifest.json",
+      "sha256": "b453144fd6844244649b99c9bced07067c670da0f5dd83edd291919b9e24536b"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_policy_without_join/schema.sql",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_policy_without_join/schema.sql",
+      "sha256": "fe08c0fb9c6c8d0c9bb2f84728871bdb68d89926f1797d621bd83e7bd0590fd0"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_wrong_setting/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_wrong_setting/expected-report.json",
+      "sha256": "d27dc5188a6d963fd8b7dbceeb4eb37bc728770c06b758806318e2cffbeef2e3"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_wrong_setting/manifest.json",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_wrong_setting/manifest.json",
+      "sha256": "8d17f36823fcd2b943ea935893b25437e3ffb9e0fc416a5658f054f6b5c55490"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/tenant_derivation_wrong_setting/schema.sql",
+      "destinationPath": "tests/fixtures/fail/tenant_derivation_wrong_setting/schema.sql",
+      "sha256": "6633c2fbe733f3cd9feeda643b02fd2e060ac99bf7c22af08c85e413cfd5fa56"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/truncate_dangerous/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/truncate_dangerous/expected-report.json",
+      "sha256": "f6ac52462c51e5f929f2f31b5d2ee33795b4b16d959862173e38c21b81abb23f"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/truncate_dangerous/manifest.json",
+      "destinationPath": "tests/fixtures/fail/truncate_dangerous/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/truncate_dangerous/schema.sql",
+      "destinationPath": "tests/fixtures/fail/truncate_dangerous/schema.sql",
+      "sha256": "35b827d36d29bdc1f19158c784c8f6f0b69900d65eae36091cf2c5020928ad44"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/unqualified_delete/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/unqualified_delete/expected-report.json",
+      "sha256": "44dd92c637cf7ab77ee5ef956a3f3e0f45233690e774efcf22d16fe5b5f73fb5"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/unqualified_delete/manifest.json",
+      "destinationPath": "tests/fixtures/fail/unqualified_delete/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/unqualified_delete/schema.sql",
+      "destinationPath": "tests/fixtures/fail/unqualified_delete/schema.sql",
+      "sha256": "f5f1aba91540e097dc82a9221a8c578bf439334209f9bfd8d07cd253abd10637"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/unqualified_update/expected-report.json",
+      "destinationPath": "tests/fixtures/fail/unqualified_update/expected-report.json",
+      "sha256": "e2f36ad73e6c3b1196071e9a8a86af7764d01f7c260ce0fd8713fd9a255b0e07"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/unqualified_update/manifest.json",
+      "destinationPath": "tests/fixtures/fail/unqualified_update/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/fail/unqualified_update/schema.sql",
+      "destinationPath": "tests/fixtures/fail/unqualified_update/schema.sql",
+      "sha256": "feef49174ad8a841419e123b53319208cd0a7d6c40408f39d75c2e663af9f8a2"
+    },
+    {
+      "sourcePath": "tests/fixtures/gate-profiles/default.json",
+      "destinationPath": "tests/fixtures/gate-profiles/default.json",
+      "sha256": "f863f52fa2fc0e435f892ba7bd69f5036ba1e520c5de427ed1c8a48f361c6f20"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/rls_tenant_policy_ok/expected-report.json",
+      "destinationPath": "tests/fixtures/pass/rls_tenant_policy_ok/expected-report.json",
+      "sha256": "a60bdbd78cc5254e9427bce061920b7bde1189dc818f1011f9934484e923c735"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/rls_tenant_policy_ok/manifest.json",
+      "destinationPath": "tests/fixtures/pass/rls_tenant_policy_ok/manifest.json",
+      "sha256": "c112c3f417272f1ecc0ecc4a2ae067ceaad7026d4fa639b56e077bf34d0a50a4"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/rls_tenant_policy_ok/schema.sql",
+      "destinationPath": "tests/fixtures/pass/rls_tenant_policy_ok/schema.sql",
+      "sha256": "ffc84b9aeabd7e240b278e29dc5aabb3a44965c1d091f376d1c067686efe950e"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/tenant_derivation_multihop_ok/expected-report.json",
+      "destinationPath": "tests/fixtures/pass/tenant_derivation_multihop_ok/expected-report.json",
+      "sha256": "7994b253901c4dfa5e75780faef608f4c01696b7be9c1ad787b2cd370e7ea10a"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/tenant_derivation_multihop_ok/manifest.json",
+      "destinationPath": "tests/fixtures/pass/tenant_derivation_multihop_ok/manifest.json",
+      "sha256": "0e35616d83ccc3ba7418e1df5c46b448e186be2aa83ac746618105a2acb9f471"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/tenant_derivation_multihop_ok/schema.sql",
+      "destinationPath": "tests/fixtures/pass/tenant_derivation_multihop_ok/schema.sql",
+      "sha256": "32f7888e6f48c1480778586bb0e9a994e3439eb184d2775250fc1517fecbd275"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/tenant_derivation_reversed_equality_ok/expected-report.json",
+      "destinationPath": "tests/fixtures/pass/tenant_derivation_reversed_equality_ok/expected-report.json",
+      "sha256": "7994b253901c4dfa5e75780faef608f4c01696b7be9c1ad787b2cd370e7ea10a"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/tenant_derivation_reversed_equality_ok/manifest.json",
+      "destinationPath": "tests/fixtures/pass/tenant_derivation_reversed_equality_ok/manifest.json",
+      "sha256": "8d17f36823fcd2b943ea935893b25437e3ffb9e0fc416a5658f054f6b5c55490"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/tenant_derivation_reversed_equality_ok/schema.sql",
+      "destinationPath": "tests/fixtures/pass/tenant_derivation_reversed_equality_ok/schema.sql",
+      "sha256": "41d0d5c2c49f33bf1ad90e82879fe93e26262927a4122bfd79272ecee5ea2517"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/tenant_derivation_table_level_fk_ok/expected-report.json",
+      "destinationPath": "tests/fixtures/pass/tenant_derivation_table_level_fk_ok/expected-report.json",
+      "sha256": "7994b253901c4dfa5e75780faef608f4c01696b7be9c1ad787b2cd370e7ea10a"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/tenant_derivation_table_level_fk_ok/manifest.json",
+      "destinationPath": "tests/fixtures/pass/tenant_derivation_table_level_fk_ok/manifest.json",
+      "sha256": "8d17f36823fcd2b943ea935893b25437e3ffb9e0fc416a5658f054f6b5c55490"
+    },
+    {
+      "sourcePath": "tests/fixtures/pass/tenant_derivation_table_level_fk_ok/schema.sql",
+      "destinationPath": "tests/fixtures/pass/tenant_derivation_table_level_fk_ok/schema.sql",
+      "sha256": "d5f86736356b6a77a45de8b3e5325764f4df3ed54df45016dc51e98c2cdecf3f"
+    },
+    {
+      "sourcePath": "tests/fixtures/redaction/secret_like_sql_comments/expected-report.json",
+      "destinationPath": "tests/fixtures/redaction/secret_like_sql_comments/expected-report.json",
+      "sha256": "73f27dc6de86f6c6abbc94fc8c3ce08592282c92ebee108c694e89c0fbd35425"
+    },
+    {
+      "sourcePath": "tests/fixtures/redaction/secret_like_sql_comments/manifest.json",
+      "destinationPath": "tests/fixtures/redaction/secret_like_sql_comments/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/redaction/secret_like_sql_comments/schema.sql",
+      "destinationPath": "tests/fixtures/redaction/secret_like_sql_comments/schema.sql",
+      "sha256": "3a525c7739932b57d0a30d01614782920a2b4f7f577c9dcd71133938ad10122f"
+    },
+    {
+      "sourcePath": "tests/fixtures/unknown/unclassified_table/expected-report.json",
+      "destinationPath": "tests/fixtures/unknown/unclassified_table/expected-report.json",
+      "sha256": "84a7d2e18634e74d5826cafbea2ab0754069f6da9ec2233787333ed922679a82"
+    },
+    {
+      "sourcePath": "tests/fixtures/unknown/unclassified_table/manifest.json",
+      "destinationPath": "tests/fixtures/unknown/unclassified_table/manifest.json",
+      "sha256": "654fed8560cf5a08c616766be43d8f1efa932fb6d97b1c698be94b40d0da4994"
+    },
+    {
+      "sourcePath": "tests/fixtures/unknown/unclassified_table/schema.sql",
+      "destinationPath": "tests/fixtures/unknown/unclassified_table/schema.sql",
+      "sha256": "bb00f39aafb830241624dec3e47e16e164dcd89b2c704c04a1e106a2d993f23d"
+    },
+    {
+      "sourcePath": "tests/fixtures/waiver/critical_with_expired_waiver/expected-report.json",
+      "destinationPath": "tests/fixtures/waiver/critical_with_expired_waiver/expected-report.json",
+      "sha256": "fb29164312b9bd55a61f60ad37a4cc00041baebb9eb4beba675873f140701049"
+    },
+    {
+      "sourcePath": "tests/fixtures/waiver/critical_with_expired_waiver/manifest.json",
+      "destinationPath": "tests/fixtures/waiver/critical_with_expired_waiver/manifest.json",
+      "sha256": "50f07052ae78f1ec7c2d2975a93566dd82e1b96f8cd8cd00df9da52e5ad4609b"
+    },
+    {
+      "sourcePath": "tests/fixtures/waiver/critical_with_expired_waiver/schema.sql",
+      "destinationPath": "tests/fixtures/waiver/critical_with_expired_waiver/schema.sql",
+      "sha256": "8a4f77bae5e35d6728bd1f7ce2e69e99042e81a746d965b4acbaced92b075f35"
+    },
+    {
+      "sourcePath": "tests/fixtures/waiver/critical_with_incomplete_waiver/expected-report.json",
+      "destinationPath": "tests/fixtures/waiver/critical_with_incomplete_waiver/expected-report.json",
+      "sha256": "f2b701ffb7ec85935960832334ab29efa27f15699012ba9b0900cb0bf253ebc8"
+    },
+    {
+      "sourcePath": "tests/fixtures/waiver/critical_with_incomplete_waiver/manifest.json",
+      "destinationPath": "tests/fixtures/waiver/critical_with_incomplete_waiver/manifest.json",
+      "sha256": "d1f657a5893a9ba23a4abcf2761c645af8d1334ab6fcaab6bb932de7abe7a6b4"
+    },
+    {
+      "sourcePath": "tests/fixtures/waiver/critical_with_incomplete_waiver/schema.sql",
+      "destinationPath": "tests/fixtures/waiver/critical_with_incomplete_waiver/schema.sql",
+      "sha256": "8a4f77bae5e35d6728bd1f7ce2e69e99042e81a746d965b4acbaced92b075f35"
+    },
+    {
+      "sourcePath": "tests/fixtures/waiver/critical_with_valid_expiring_waiver/expected-report.json",
+      "destinationPath": "tests/fixtures/waiver/critical_with_valid_expiring_waiver/expected-report.json",
+      "sha256": "75d1e536a6400b5870bf58e3006ac2450b325a2173ac5f56413bb06f4d987f7d"
+    },
+    {
+      "sourcePath": "tests/fixtures/waiver/critical_with_valid_expiring_waiver/manifest.json",
+      "destinationPath": "tests/fixtures/waiver/critical_with_valid_expiring_waiver/manifest.json",
+      "sha256": "4f0121c59bf044664882f9044c4d5eafc9968cd2a8c0e2ad00b23acc69da4481"
+    },
+    {
+      "sourcePath": "tests/fixtures/waiver/critical_with_valid_expiring_waiver/schema.sql",
+      "destinationPath": "tests/fixtures/waiver/critical_with_valid_expiring_waiver/schema.sql",
+      "sha256": "8a4f77bae5e35d6728bd1f7ce2e69e99042e81a746d965b4acbaced92b075f35"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/function_without_tenant_filter/expected-report.json",
+      "destinationPath": "tests/fixtures/warn/function_without_tenant_filter/expected-report.json",
+      "sha256": "036fede57c408aad46b9ab40f9de8468986faa9352ba20b79cdbf8175a7d7405"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/function_without_tenant_filter/manifest.json",
+      "destinationPath": "tests/fixtures/warn/function_without_tenant_filter/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/function_without_tenant_filter/schema.sql",
+      "destinationPath": "tests/fixtures/warn/function_without_tenant_filter/schema.sql",
+      "sha256": "ba0810c256796db9e0b58b226876297508b3da63b09b005e811a9a25f1d9c384"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/security_definer_missing_search_path/expected-report.json",
+      "destinationPath": "tests/fixtures/warn/security_definer_missing_search_path/expected-report.json",
+      "sha256": "69942da01b211ac55d50a6dab5c0f92f5c7526753aec8b51b935ef79cd0eedbb"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/security_definer_missing_search_path/manifest.json",
+      "destinationPath": "tests/fixtures/warn/security_definer_missing_search_path/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/security_definer_missing_search_path/schema.sql",
+      "destinationPath": "tests/fixtures/warn/security_definer_missing_search_path/schema.sql",
+      "sha256": "1711c2646e5ee98f6ffd933f9087e387086f8e25b890c35bdfb0321bac2648e7"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/tenant_column_nullable/expected-report.json",
+      "destinationPath": "tests/fixtures/warn/tenant_column_nullable/expected-report.json",
+      "sha256": "a1ad832c42811e300249d78d15cf902a842ed14ab8311b59c1fafc274053e970"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/tenant_column_nullable/manifest.json",
+      "destinationPath": "tests/fixtures/warn/tenant_column_nullable/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/tenant_column_nullable/schema.sql",
+      "destinationPath": "tests/fixtures/warn/tenant_column_nullable/schema.sql",
+      "sha256": "61f9056c892cafa807aa3875286ab61948485354ac322bd6b591312442a1f4a7"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/view_without_tenant_filter/expected-report.json",
+      "destinationPath": "tests/fixtures/warn/view_without_tenant_filter/expected-report.json",
+      "sha256": "972e493ec9a8cbb5b4309ec34f3e39c25a8004665f857efb280178b23e4a0ad5"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/view_without_tenant_filter/manifest.json",
+      "destinationPath": "tests/fixtures/warn/view_without_tenant_filter/manifest.json",
+      "sha256": "c51218f963dbedf826c566edfa1b0552fcae10afc161d7f2d5b51b424bf3bf7c"
+    },
+    {
+      "sourcePath": "tests/fixtures/warn/view_without_tenant_filter/schema.sql",
+      "destinationPath": "tests/fixtures/warn/view_without_tenant_filter/schema.sql",
+      "sha256": "1c89f65bb48a8892720cfa71e6d2719465c92d79d9676255cbfed8dae15ea400"
+    }
+  ],
+  "adaptations": [
+    "Cargo repository URL updated; package and CLI names preserved.",
+    "Historical project and agent status documents excluded; current introductions retained."
+  ]
+}

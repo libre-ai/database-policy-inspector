@@ -1,21 +1,22 @@
 <!-- SPDX-FileCopyrightText: 2026 Libre AI contributors -->
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
-<!-- Written for the retained Libre AI portfolio on 2026-09-14; earlier source documents and revisions retain their original licensing. -->
 
-# Libre AI Database Policy Inspector
+# Database Policy Inspector
 
-[English](README.md)
+Examiner des fichiers SQL PostgreSQL avant d’appliquer une migration : repérer des règles d’accès manquantes, des permissions trop larges ou des opérations dangereuses.
 
-Une modification de base de données peut changer les accès d’une façon difficile à repérer en revue. Ce projet explore l’inspection statique de fichiers PostgreSQL pour les développeurs qui examinent des politiques SQL et des migrations. Les constats relieraient un emplacement du fichier à une règle explicite pour orienter l’analyse.
+L’outil produit un rapport JSON et peut bloquer une vérification CI. Il analyse les fichiers fournis ; il ne se connecte pas à votre base.
 
-## Usages visés
+## Essayer
 
-- Examiner une politique d’accès SQL avant de modifier une base de données.
-- Rechercher dans les migrations les situations couvertes par un ensemble de règles défini.
-- Repérer les syntaxes non prises en charge et les cas nécessitant des tests à l’exécution.
+Avec Rust installé, depuis ce dépôt :
 
-## Disponibilité
+```sh
+cargo run --locked -- run \
+  --manifest tests/fixtures/pass/rls_tenant_policy_ok/manifest.json \
+  --schema-dump tests/fixtures/pass/rls_tenant_policy_ok/schema.sql
+```
 
-Ce dépôt contient actuellement uniquement de la documentation ; aucun outil installable n’est disponible.
+Adaptez ensuite le manifeste et le SQL à votre application. Code de sortie : `0` accepté, `1` contrôle bloquant, `2` erreur d’entrée.
 
-Découvrez le [catalogue des projets Libre AI](https://github.com/libre-ai/.github/blob/main/profile/README.fr.md).
+[Guide](docs/usage.md) · [English](README.md)
