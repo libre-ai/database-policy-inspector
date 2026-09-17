@@ -9,7 +9,7 @@ name: ci
 # those releases by sha256 and run them as a database-security gate.
 on:
   push:
-    branches: [main]
+    branches: [main, migrate/recover-code]
   pull_request:
   # Manual escape hatch: GitHub occasionally fails to deliver pull_request
   # open/synchronize events, leaving required checks unreported and a PR
