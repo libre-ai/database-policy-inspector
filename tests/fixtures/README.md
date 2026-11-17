@@ -54,3 +54,6 @@ Fixtures must not contain real secrets, DSNs, row data, raw embeddings, prompts,
 | `redaction/secret_like_sql_comments` | Regression fixture ensuring fake DSN/token/comment content does not leak into JSON/Markdown reports. |
 | `fail/tenant_derivation_missing_fk` | Derived tenant path declared in manifest but not backed by FK evidence; blocks in `release`. |
 | `fail/tenant_derivation_policy_without_join` | FK exists but RLS policy does not enforce declared tenant derivation; blocks in `release`. |
+| `fail/rename_column_dangerous` | Migration renames a column; blocks outside `local`, warns in `local`. |
+| `fail/rename_table_dangerous` | Migration renames a table. |
+| `pass/rename_in_comment_ok` | `RENAME` and `DROP` statements inside line and block comments raise no finding. |
