@@ -197,6 +197,27 @@ pub fn collect_schema_facts(schema: &str) -> SchemaFacts {
                             "column",
                             &format!("{}.{}", alter.name, column_name),
                         )),
+                        // A rename breaks every binary still reading the old name. The
+                        // subject carries the name before the rename only: the new name
+                        // and the statement text never reach a report.
+                        AlterTableOperation::RenameTable { .. } => {
+                            facts.dangerous.push(Finding::new(
+                                "RENAME_TABLE_DANGEROUS",
+                                "migration_safety",
+                                "high",
+                                "table",
+                                &alter.name.to_string(),
+                            ))
+                        }
+                        AlterTableOperation::RenameColumn {
+                            old_column_name, ..
+                        } => facts.dangerous.push(Finding::new(
+                            "RENAME_COLUMN_DANGEROUS",
+                            "migration_safety",
+                            "high",
+                            "column",
+                            &format!("{}.{}", alter.name, old_column_name),
+                        )),
                         _ => {}
                     }
                 }
@@ -1115,5 +1136,96 @@ mod tests {
         assert!(facts.policy_tables.contains("presto_jobs"));
         assert!(facts.policy_using.contains("presto_jobs"));
         assert!(facts.policy_with_check.contains("presto_jobs"));
+    }
+
+    fn dangerous_subjects(facts: &SchemaFacts, rule_id: &str) -> Vec<String> {
+        facts
+            .dangerous
+            .iter()
+            .filter(|finding| finding.rule_id == rule_id)
+            .map(|finding| finding.subject_name.clone())
+            .collect()
+    }
+
+    #[test]
+    fn lowercase_column_rename_without_column_keyword_is_dangerous() {
+        let facts = collect_schema_facts("alter table public.tasks rename title to label;");
+        assert_eq!(
+            dangerous_subjects(&facts, "RENAME_COLUMN_DANGEROUS"),
+            ["public.tasks.title"]
+        );
+        let finding = &facts.dangerous[0];
+        assert_eq!(finding.category, "migration_safety");
+        assert_eq!(finding.severity, "high");
+        assert_eq!(finding.subject_type, "column");
+    }
+
+    #[test]
+    fn table_rename_is_dangerous_and_names_the_table_before_the_rename() {
+        let facts = collect_schema_facts("ALTER TABLE public.tasks RENAME TO chores;");
+        assert_eq!(
+            dangerous_subjects(&facts, "RENAME_TABLE_DANGEROUS"),
+            ["public.tasks"]
+        );
+        let finding = &facts.dangerous[0];
+        assert_eq!(finding.category, "migration_safety");
+        assert_eq!(finding.severity, "high");
+        assert_eq!(finding.subject_type, "table");
+    }
+
+    #[test]
+    fn one_alter_table_yields_one_finding_per_operation() {
+        let facts = collect_schema_facts(
+            "ALTER TABLE public.tasks RENAME COLUMN title TO label, DROP COLUMN notes;",
+        );
+        assert_eq!(
+            dangerous_subjects(&facts, "RENAME_COLUMN_DANGEROUS"),
+            ["public.tasks.title"]
+        );
+        assert_eq!(
+            dangerous_subjects(&facts, "DROP_COLUMN_DANGEROUS"),
+            ["public.tasks"]
+        );
+        assert_eq!(facts.dangerous.len(), 2);
+    }
+
+    #[test]
+    fn rename_text_inside_string_literals_is_not_a_rename() {
+        let facts = collect_schema_facts(
+            r#"
+            COMMENT ON TABLE public.tasks IS 'ALTER TABLE t RENAME TO u';
+            INSERT INTO public.notes (body) VALUES ('ALTER TABLE t RENAME COLUMN a TO b');
+            "#,
+        );
+        assert!(facts.parser_error_statements.is_empty());
+        assert!(
+            facts
+                .dangerous
+                .iter()
+                .all(|finding| !finding.rule_id.starts_with("RENAME_"))
+        );
+    }
+
+    #[test]
+    fn rename_findings_carry_identifiers_only() {
+        let facts = collect_schema_facts(
+            r#"
+            ALTER TABLE public.tasks RENAME COLUMN title TO fresh_label;
+            ALTER TABLE public.tasks RENAME TO fresh_chores;
+            "#,
+        );
+        let renames: Vec<&Finding> = facts
+            .dangerous
+            .iter()
+            .filter(|finding| finding.rule_id.starts_with("RENAME_"))
+            .collect();
+        assert_eq!(renames.len(), 2);
+        for finding in renames {
+            let serialized = serde_json::to_string(finding).unwrap_or_default();
+            assert!(!serialized.is_empty());
+            assert!(!serialized.contains("fresh_"));
+            assert!(!finding.subject_name.contains(' '));
+            assert!(!finding.subject_name.to_uppercase().contains("RENAME"));
+        }
     }
 }
