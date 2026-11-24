@@ -21,4 +21,4 @@ cargo deny check bans licenses sources
 cargo llvm-cov --locked --all-features --fail-under-lines 79 --fail-under-functions 77 --json --output-path coverage.json
 ```
 
-The recovery baseline measured 79.45% line coverage and 77.64% function coverage on macOS with Rust 1.97.0 and cargo-llvm-cov 0.8.7. CI enforces the integer floors above; Linux CI still needs to run on the published code. Branch coverage was not measured. The CLI integration tests exercise success, refusal and invalid input through the compiled executable and verify that inputs remain unchanged.
+The recovery baseline measured 79.45% line coverage and 77.64% function coverage on macOS with Rust 1.97.0 and cargo-llvm-cov 0.8.7; re-measured with Rust 1.100.0 and the same cargo-llvm-cov, it is 79.99% line coverage and 78.22% function coverage. CI enforces the integer floors above; Linux CI still needs to run on the published code. Branch coverage was not measured. The CLI integration tests exercise success, refusal and invalid input through the compiled executable and verify that inputs remain unchanged.

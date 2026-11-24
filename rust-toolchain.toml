@@ -4,6 +4,6 @@
 # `rustup update stable` resolved to. Above the `rust-version = "1.95"` floor
 # declared in Cargo.toml.
 [toolchain]
-channel = "1.97.0"
+channel = "1.100.0"
 profile = "minimal"
 components = ["clippy", "rustfmt"]
